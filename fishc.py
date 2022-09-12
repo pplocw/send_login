@@ -1,11 +1,11 @@
 import time
-import os
-import sys
 #http请求模块
 from selenium import webdriver
 #  pip install webdriver_manager 
+# from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.common.by import By
+import os
+import sys
 username = sys.argv[1]
 password = sys.argv[2]
 def fish_com():
