@@ -15,15 +15,19 @@ def fish_com():
     time.sleep(1)
 
 def login():
-    driver.find_element(By.NAME, r"username").send_keys(username)
-    driver.find_element(By.NAME, r"password").send_keys(password)
-    driver.find_element(By.XPATH, r'//*[@id="lsform"]/div/div/table/tbody/tr[2]/td[3]/button').click()
-    time.sleep(2)
-    driver.maximize_window()
-    driver.find_element(By.XPATH, r'//*[@id="mn_Nac60"]/a').click()
-    time.sleep(2)
-    driver.find_element(By.XPATH, r'//*[@id="JD_sign"]').click() 
-    print('签到成功')
+    try:
+        driver.find_element(By.NAME, r"username").send_keys(username)
+        driver.find_element(By.NAME, r"password").send_keys(password)
+        driver.find_element(By.XPATH, r'//*[@id="lsform"]/div/div/table/tbody/tr[2]/td[3]/button').click()
+        time.sleep(2)
+        driver.maximize_window()
+        driver.find_element(By.XPATH, r'//*[@id="mn_Nac60"]/a').click()
+        time.sleep(2)
+        driver.find_element(By.XPATH, r'//*[@id="JD_sign"]').click() 
+        print('签到成功')
+    except:
+        print("error_login")
+        pass
 
 if __name__ == "__main__":
     chrome_options = webdriver.ChromeOptions()
