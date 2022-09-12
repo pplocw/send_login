@@ -6,6 +6,7 @@ from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 import os
 import sys
+from selenium.webdriver.common.by import By
 username = sys.argv[1]
 password = sys.argv[2]
 def fish_com():
