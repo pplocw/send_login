@@ -40,7 +40,6 @@ def login(code_text):
     driver.find_element(By.NAME, r'vcode').send_keys(code_text)
     time.sleep(2)
     driver.find_element(By.XPATH, r'//*[@id="login"]').click()
-    print('签到成功')
     time.sleep(2)
 
 # 进行签到操作
@@ -51,6 +50,7 @@ def sign_in():
         time.sleep(2)
         driver.find_element(By.XPATH, r'//*[@id="checkin-status"]').click()
         time.sleep(2)
+        print('bugku_签到成功')
     except:
         pass
 
